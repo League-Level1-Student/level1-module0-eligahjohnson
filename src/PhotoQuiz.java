@@ -20,13 +20,12 @@ public class PhotoQuiz {
 		JFrame quizWindow = new JFrame();
 		quizWindow.setVisible(true);
                 quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // This will make sure the program exits when you close the window
-
 		// 1. find an image on the internet, and put its URL in a String variable (from your browser, right click on the image, and select “Copy Image Address”)
-
+String image = "https://www.yeezytrainers.cc/p/Cheap-Yeezy-Boost-350-V2-COPPER-Black-Copper-SPLY-350-XLmv6.html";
 		// 2. create a variable of type "Component" that will hold your image
            Component eligah ;
 		// 3. use the "createImage()" method below to initialize your Component
-           eligah = createImage ("https://www.flightclub.com/media/catalog/product/cache/1/image/1600x1140/9df78eab33525d08d6e5fb8d27136e95/2/0/201539_1.jpg")   ;
+           eligah = createImage (image);
 		// 4. add the image to the quiz window
               quizWindow.add(eligah);
 		// 5. call the pack() method on the quiz window
@@ -34,7 +33,7 @@ public class PhotoQuiz {
 		// 6. ask a question that relates to the image
       String  frog = JOptionPane.showInputDialog("Do you Now the Name of Kanye West Shoes ? ");  
 		// 7. print "CORRECT" if the user gave the right answer
-     if(frog.equals("Yeezys")) {
+     if(frog.equalsIgnoreCase("Yeezys")) {
      System.out.println("your correct");
      }
 		// 8. print "INCORRECT" if the answer is wrong
@@ -42,17 +41,23 @@ public class PhotoQuiz {
     	 System.out.println("incorrect");
      }
 		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
-
+quizWindow.remove(eligah);
 		// 10. find another image and create it (might take more than one line of code)
-
+Component jakob ;
+jakob = createImage ("https://www.flightclub.com/air-jordan-future-black-black-clear-011968");
 		// 11. add the second image to the quiz window
-
+quizWindow.add(jakob);
 		// 12. pack the quiz window
-
+quizWindow.pack();
 		// 13. ask another question
-
+String toad = JOptionPane.showInputDialog("What are the name of these shoes ");
 		// 14+ check answer, say if correct or incorrect, etc.ther 
-
+if(toad.equalsIgnoreCase("Jordans")) {
+	System.out.println("Your correct");
+}
+else {
+	System.out.println("incorrect");
+}
 	}
 	
 	private static Component createImage(String imageUrl) throws MalformedURLException {
