@@ -13,6 +13,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+import org.omg.Messaging.SyncScopeHelper;
+
 public class BodyPartQuiz {
 
 	// 0. You can use the celebrity photos we have placed in the default java package,  
@@ -34,13 +36,32 @@ public class BodyPartQuiz {
         int eligah = 0 ;
 		// 2. Set the size of the window in the initializeGui() method below
         window.setSize(500, 500);
+        String correct  ;
 		for (int i = 0; i < 4; i++) {
-			
+	if(i==0) {
+		correct = "Arnold";
+		
+	}
+	else if (i == 1) {
+		correct = "leonardo";
+	}
+	else if (i==2) {
+		correct = "Morgan";
+	}
+	else if (i==3) {  
+		correct = "Jack"; }
 			// 4. Ask the user who this person is and store their answer
 			String guess= JOptionPane.showInputDialog("who is this?");
 			
 			// 5. Check their answer. If they guessed correctly:
 			// -- Tell them they are right and increase the score by 1
+if(guess.equalsIgnoreCase("Arnold")|| guess.equalsIgnoreCase("arnold schwarzenegger") ){
+System.out.println("You are Correct");	
+eligah++;
+}
+else {
+	System.out.println("Incorrect");
+}
 
 			// 6. Otherwise:
 			// -- Tell them they are wrong and who the person is
@@ -75,7 +96,7 @@ public class BodyPartQuiz {
 		window.add(panel);
 		
 		// 3. Change the size of the window so that you can only see part of the image.		
-		window.setSize(250,250);
+		window.setSize(500,500);
 		
 		showNextImage();
 		
