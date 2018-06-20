@@ -21,7 +21,7 @@ public class PhotoQuiz {
 		quizWindow.setVisible(true);
                 quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // This will make sure the program exits when you close the window
 		// 1. find an image on the internet, and put its URL in a String variable (from your browser, right click on the image, and select “Copy Image Address”)
-String image = "https://www.yeezytrainers.cc/p/Cheap-Yeezy-Boost-350-V2-COPPER-Black-Copper-SPLY-350-XLmv6.html";
+String image = "http://2app.kicksonfire.com/kofapp/upload/events_master_images/ipad_e863115c028f9768d4e846b5584c4feb5a67e33c7fdc5.jpg";
 		// 2. create a variable of type "Component" that will hold your image
            Component eligah ;
 		// 3. use the "createImage()" method below to initialize your Component
@@ -44,7 +44,7 @@ String image = "https://www.yeezytrainers.cc/p/Cheap-Yeezy-Boost-350-V2-COPPER-B
 quizWindow.remove(eligah);
 		// 10. find another image and create it (might take more than one line of code)
 Component jakob ;
-jakob = createImage ("https://www.flightclub.com/air-jordan-future-black-black-clear-011968");
+jakob = createImage ("https://images.solecollector.com/complex/image/upload/dula0xvz5mgl3d6b1fb8.jpg");
 		// 11. add the second image to the quiz window
 quizWindow.add(jakob);
 		// 12. pack the quiz window
